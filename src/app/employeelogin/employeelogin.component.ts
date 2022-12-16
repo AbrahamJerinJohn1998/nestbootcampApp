@@ -16,7 +16,7 @@ export class EmployeeloginComponent {
   {
     let data:any={"emailId":this.emailId,"password":this.password}
     console.log(data)
-    this.api.employLogin(data).subscribe(
+    this.api.EmployeeLogin(data).subscribe(
       (response:any)=>
       {
         console.log(response)
@@ -27,7 +27,7 @@ export class EmployeeloginComponent {
           let userId=response.userId
           console.log(userId)
           localStorage.setItem("userInfo",userId)
-          // this.router.navigate(['/empview'])
+          this.router.navigate(['/employeeProfile'])
         }
       }
     )

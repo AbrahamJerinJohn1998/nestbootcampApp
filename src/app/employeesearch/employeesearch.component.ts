@@ -15,7 +15,7 @@ export class EmployeesearchComponent {
   {
     let data:any={"empCode":this.empCode}
     console.log(data)
-    this.api.searchEmployee(data).subscribe(
+    this.api.EmployeeSearchUsingCode(data).subscribe(
       (response:any)=>
       {
         console.log(response)
@@ -33,7 +33,7 @@ export class EmployeesearchComponent {
   deleteBtnClick=(id:any)=>
 {
   let data:any={"id":id}
-  this.api.deleteEmployee(data).subscribe(
+  this.api.EmployeeDelete(data).subscribe(
     (response:any)=>
     {
       console.log(response)

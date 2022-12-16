@@ -6,35 +6,25 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" >Security Guard Page</a>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/securityGuardProfile">View Profile</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="/securityGuardProfile">View My Profile</a>
+                <a class="nav-link active" aria-current="page" routerLink="/employeeEntryLog">Employee Entry</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="/employeeEntryLog">Log Employee Entry</a>
+                <a class="nav-link active" aria-current="page" routerLink="/viewAllEmployeeLogsandUpdateExitTime">Employee Exit</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="/viewAllEmployeeLogsandUpdateExitTime">Log Employee Exit</a>
+                <a class="nav-link active" aria-current="page" routerLink="/visitorEntryLog">Visitor Entry</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="/visitorEntryLog">Log Visitor Entry</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="/viewAllVisitorLogsandUpdateExitTime">Log Visitor Exit</a>
+                <a class="nav-link active" aria-current="page" routerLink="/viewAllVisitorLogsandUpdateExitTime">Visitor Exit</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" routerLink="/securityGuardLogin">Logout</a>
               </li> 
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" >Logged Security Guard ID: {{sgID}}</a>
-              </li> 
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
