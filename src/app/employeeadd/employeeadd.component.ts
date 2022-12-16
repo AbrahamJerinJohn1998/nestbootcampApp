@@ -20,7 +20,7 @@ export class EmployeeaddComponent {
     let data:any={"empCode":this.empCode,"name":this.name,"designation":this.designation,"salary":this.salary,"emailId":this.emailId,
     "phoneNo":this.phoneNo,"password":this.password}
     console.log(data)
-    this.api.addEmployee(data).subscribe(
+    this.api.EmployeeReg(data).subscribe(
       (response:any)=>
       {
         console.log(response)

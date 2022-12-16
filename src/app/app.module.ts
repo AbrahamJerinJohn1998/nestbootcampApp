@@ -23,26 +23,87 @@ import { ViewemployeelogsadminComponent } from './viewemployeelogsadmin/viewempl
 import { ViewvisitorslogsadminComponent } from './viewvisitorslogsadmin/viewvisitorslogsadmin.component';
 import { ViewprofileemployeeComponent } from './viewprofileemployee/viewprofileemployee.component';
 import { EmployeeupdateComponent } from './employeeupdate/employeeupdate.component';
+import { ApplyleaveComponent } from './applyleave/applyleave.component';
+import { ViewmyleavesComponent } from './viewmyleaves/viewmyleaves.component';
+import { EmployeegrantleavesComponent } from './employeegrantleaves/employeegrantleaves.component';
+import { EmployeeleavehandleComponent } from './employeeleavehandle/employeeleavehandle.component';
+import { NavbaremployeeComponent } from './navbaremployee/navbaremployee.component';
 const myRoute:Routes=[
-  {
-    path:"addemp",
-    component:EmployeeaddComponent
-  },
-  {
-    path:"viewemp",
-    component:EmployeeviewComponent
-  },
-  {
-    path:"searchemp",
-    component:EmployeesearchComponent
-  },
   {
     path:"",
     component:AdminloginComponent
   },
   {
-    path:"emplogin",
+    path:"employeeLogin",
     component:EmployeeloginComponent
+  },
+  {
+    path:"employeeRegistration",
+    component:EmployeeaddComponent
+  },
+  {
+    path:"adminProfile",
+    component:NavbarAdminComponent
+  },
+  {
+    path:"employeeProfile",
+    component:ViewprofileemployeeComponent
+  },
+  {
+    path:"viewAllEmployees",
+    component:EmployeeviewComponent
+  },
+  {
+    path:"securityGuardLogin",
+    component:SecurityloginComponent
+  },
+  {
+    path:"securityGuardProfile",
+    component:ViewprofilesecurityComponent
+  },
+  {
+    path:"searchEmployee",
+    component:EmployeesearchComponent
+  },
+  {
+    path:"updateEmployee",
+    component:EmployeeupdateComponent
+  },
+  {
+    path:"grantLeaveForEmployee",
+    component:EmployeegrantleavesComponent
+  },
+  {
+    path:"addSecurityGuard",
+    component:SecurityaddComponent
+  },
+  {
+    path:"applyForLeave",
+    component:ApplyleaveComponent
+  },
+  {
+    path:"viewMyLeaves",
+    component:ViewmyleavesComponent
+  },
+  {
+    path:"employeeLeaveHandle",
+    component:EmployeeleavehandleComponent
+  },
+  {
+    path:"employeeEntryLog",
+    component:AddemployeelogsComponent
+  },
+  {
+    path:"visitorEntryLog",
+    component:AddvisitorslogsComponent
+  },
+  {
+    path:"viewAllEmployeeLogsandUpdateExitTime",
+    component:ViewemployeelogsComponent
+  },
+  {
+    path:"viewAllVisitorLogsandUpdateExitTime",
+    component:ViewvisitorslogsComponent
   }
   ]
 @NgModule({
@@ -65,7 +126,12 @@ const myRoute:Routes=[
     ViewemployeelogsadminComponent,
     ViewvisitorslogsadminComponent,
     ViewprofileemployeeComponent,
-    EmployeeupdateComponent
+    EmployeeupdateComponent,
+    ApplyleaveComponent,
+    ViewmyleavesComponent,
+    EmployeegrantleavesComponent,
+    EmployeeleavehandleComponent,
+    NavbaremployeeComponent
   ],
   imports: [
     BrowserModule,

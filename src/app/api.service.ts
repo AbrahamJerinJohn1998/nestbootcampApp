@@ -6,104 +6,114 @@ import { Injectable } from '@angular/core';
 })
 export class ApiService {
   constructor(private http:HttpClient) { }
-  addEmployee = (data:any) =>{
-    return this.http.post("http://localhost:8080/addEmployee",data)
+  EmployeeReg=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/employeeRegistration",dataToSend)
   }
 
-  getEmployee = ()=>{
-    return this.http.get("http://localhost:8080/viewAllEmployee")
+  EmployeeLogin=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/employeeLogin",dataToSend)
   }
 
-  searchEmployee = (data:any)=>{
-    console.log(data)
-    return this.http.post("http://localhost:8080/searchEmployee", data)
+  ViewAllEmployee=()=>
+  {
+    return this.http.get("http://localhost:8080/viewEmployees")
   }
 
-  deleteEmployee = (data:any)=>{
-    return this.http.post("http://localhost:8080/deleteEmployee", data)
+  GetEmployeeProfile=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/employeeProfile",dataToSend)
   }
 
-  updateEmployee = (data:any)=>{
-    return this.http.post("http://localhost:8080/editEmployee", data)
-  }
-  
-  getEmpById = (data:any)=>{
-    return this.http.post("http://localhost:8080/employeeProfile", data)
+  SecurityGuardLogin=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/sgLogin",dataToSend)
   }
 
-  addSecurity = (data:any)=>{
-    return this.http.post("http://localhost:8080/addSecurity", data)
+  SecurityGuardProfile=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/sgProfile",dataToSend)
   }
 
-  getAllLeaves = ()=>{
-    return this.http.get("http://localhost:8080/getAllLeaves")
+  EmployeeSearchUsingCode=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/searchEmployee",dataToSend)
   }
 
-  handleLeave = (data:any)=>{
-    console.log(data)
-    return this.http.post("http://localhost:8080/updateLeaves", data)
+  EmployeeDelete=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/deleteEmployee",dataToSend)
   }
 
-  securityLogin = (data:any)=>{
-    return this.http.post("http://localhost:8080/securityLogin", data)
+  EmployeeUpdate=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/updateEmployee",dataToSend)
   }
 
-  securityProfile = (data:any) =>{
-    return this.http.post("http://localhost:8080/securityProfile", data)
+  AddEmployeeToLeaveCountDB=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/initializeNewEmployee",dataToSend)
   }
 
-  addEmpEntry = (data:any)=>{
-    return this.http.post("http://localhost:8080/addEmpEntryLog", data)
+  AddSecurityGuard=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/addSecurityGuard",dataToSend)
   }
 
-  addEmpExit = (data:any)=>{
-    return this.http.post("http://localhost:8080/addEmpExitLog", data)
+  ApplyForLeave=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/addLeave",dataToSend)
   }
 
-  addVisEntry = (data:any) =>{
-    return this.http.post("http://localhost:8080/addVisEntryLog",data)
-  }
-  addVisExit = (data:any) =>{
-    return this.http.post("http://localhost:8080/addVisExitLog",data)
+  ViewMyLeavesForCurrentYear=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/viewRemainingLeaves",dataToSend)
   }
 
-  employeeLogin = (data:any)=>{
-    return this.http.post("http://localhost:8080/employeeLogin",data)
+  HandleLeave=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/handleLeave",dataToSend)
   }
 
-  employeeProfile = (data:any)=>{
-    return this.http.post("http://localhost:8080/employeeProfile",data)
+  ReduceLeaveCount=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/reduceLeaveCount",dataToSend)
   }
 
-  applyLeave = (data:any)=>{
-    return this.http.post("http://localhost:8080/applyLeave",data)
+  ViewLeaveApplicationJoinedWithLeaveCount=()=>
+  {
+    return this.http.get("http://localhost:8080/viewLeaveApplicationWithLeaveCount")
   }
 
-  getEmpLeaves = (data:any)=>{
-    return this.http.post("http://localhost:8080/getEmployeeLeaves",data)
+  AddEmployeeEntry=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/addEmployeeEntry",dataToSend)
   }
 
-  getLeaveDetails = (data:any)=>{
-    return this.http.post("http://localhost:8080/getLeaveDetails",data)
-  }
-  
-  getEmpLogs = (data:any)=>{
-    return this.http.post("http://localhost:8080/viewEmpLog",data)
+  AddVisitorEntry=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/addVisitorEntry",dataToSend)
   }
 
-  getSecEmpLogs = ()=>{
-    return this.http.get("http://localhost:8080/viewSecEmpLog")
+  ViewAllEmployeeLogs=()=>
+  {
+    return this.http.get("http://localhost:8080/findallEmployeeLogs")
   }
 
-  getSecVisLogs = ()=>{
-    return this.http.get("http://localhost:8080/viewSecVisLog")
+  UpdateEmployeeExitTime=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/addEmployeeExit",dataToSend)
   }
 
-  searchLogs = (data:any)=>{
-    return this.http.post("http://localhost:8080/searchEmpLog",data)
+  ViewAllVisitorLogs=()=>
+  {
+    return this.http.get("http://localhost:8080/findallVisitorLogs")
   }
 
-  searchVisLogs = (data:any)=>{
-    return this.http.post("http://localhost:8080/searchVisLog",data)
+  UpdateVisitorExitTime=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/addVisitorExit",dataToSend)
   }
+
 }
