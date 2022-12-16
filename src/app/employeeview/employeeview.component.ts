@@ -9,7 +9,7 @@ import { ApiService } from '../api.service';
 export class EmployeeviewComponent {
   constructor(private api:ApiService)
   {
-   api.fetchEmployees().subscribe(
+   api.getEmployee().subscribe(
     (response:any)=>
     {
       this.data=response;
